@@ -1,6 +1,6 @@
 const puppeteer = require('puppeteer');
 
-const scrapeLogic =(res) => {
+const scrapeLogic = async (res) => {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
     await page.goto('https://www.bankier.pl/gielda/notowania/akcje');
