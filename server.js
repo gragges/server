@@ -18,6 +18,9 @@ app.get('/', (req, res) => {
 app.get('scrape', (req, res) => {
     scrapeLogic(res);
   })
+  app.get('/gra', (req, res) => {
+    res.send('Hello from gra!');
+  })
 
 app.listen(port, () => {
   console.log('Server is running on ');
