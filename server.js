@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const { scrapeLogic } = require('./scrapeLogic');
 const port = process.env.PORT || 8080;
 
 const puppeteer = require('puppeteer');
@@ -14,6 +15,9 @@ app.get('/', (req, res) => {
     res.status(500).send('Error during scraping');
   });
 })
+app.get('scrape', (req, res) => {
+    scrapeLogic(res);
+  })
 
 app.listen(port, () => {
   console.log('Server is running on ');
