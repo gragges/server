@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
     res.status(500).send('Error during scraping');
   });
 })
-app.get('scrape', (req, res) => {
+app.get('/scrape', (req, res) => {
     scrapeLogic(res);
   })
   app.get('/gra', (req, res) => {
